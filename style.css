@@ -1,0 +1,46 @@
+body {
+	color: rgb(133, 26, 44);
+	background-image: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+	background-attachment: fixed;
+}
+
+body,
+html {
+	margin: 0;
+}
+
+.page {
+	position: relative;
+	height: 1px;
+	min-height: 100vh;
+}
+
+#setup {
+	color: rgb(133, 26, 44);
+}
+
+#delivery {
+	color: rgb(14, 107, 102);
+}
+
+#dad-image {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	opacity: 0;
+}
+
+#categories {
+	border-radius: 10px;
+	border: 2px dashed black;
+	padding: 5px;
+	margin-bottom: 10px;
+}
+
+#result {
+	text-shadow: 1px 2px rgba(0, 0, 0, 0.425);
+}
+
+#result > * {
+	line-height: 50px;
+}
