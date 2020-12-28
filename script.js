@@ -10,17 +10,17 @@ const getJoke = async () => {
 	const data = await response.json();
 	if (data.type === 'single') {
 		resultArea.innerHTML = `<h3 class="my-sm-5">${data.joke}</h3>`;
+		dadImage.src = 'images/oneline.png';
 		dadImage.style.opacity = '1';
 		dadImage.style.left = '0';
 		dadImage.style.right = 'auto';
-		dadImage.src = 'images/oneline.png';
 		jokeButton.disabled = false;
 	} else if (data.type === 'twopart') {
 		resultArea.innerHTML = `<h3 id="setup" class="my-sm-5">${data.setup}</h3>`;
+		dadImage.src = 'images/setup.png';
 		dadImage.style.opacity = '1';
 		dadImage.style.left = 'auto';
 		dadImage.style.right = '0';
-		dadImage.src = 'images/setup.png';
 		setTimeout(() => {
 			resultArea.innerHTML += `<h3 id="delivery" class="my-4">${data.delivery}</h3>`;
 			dadImage.src = 'images/delivery.png';
