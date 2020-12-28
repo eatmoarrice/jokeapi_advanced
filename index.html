@@ -13,30 +13,40 @@
 		<title>Document</title>
 	</head>
 	<body>
+		<nav class="row m-0">
+			<a class="col-sm-4" href="https://sv443.net/jokeapi/v2/" id="nav-col-1">API Documentation</a>
+			<a class="col-sm-6" href="http://letmegooglethat.com/?q=how+to+be+a+web+developer" id="nav-col-2">Instruction</a>
+			<a class="col-sm-2" href="https://random.dog/" id="nav-col-3">About Me</a>
+		</nav>
+
 		<div class="container page">
 			<div class="d-flex flex-column align-items-center pt-5">
-				<div id="categories">
-					<h5>Type of joke:</h5>
-					<form id="category" class="d-flex flex-column flex-sm-row align-items-sm-center justify-content-center">
-						<div class="m-1">
-							<input type="radio" name="joke" value="Programming" />
-							<label for="Programming">Programming</label>
-						</div>
-						<div class="m-1">
-							<input type="radio" name="joke" value="Dark" />
-							<label for="Dark">Dark</label>
-						</div>
-						<div class="m-1">
-							<input type="radio" name="joke" value="Pun" />
-							<label for="Pun">Pun</label>
-						</div>
-						<div class="m-1">
-							<input type="radio" name="joke" value="Christmas" />
-							<label for="Christmas">Christmas</label>
-						</div>
-					</form>
+				<div class="row">
+					<div id="categories" class="col-sm-8">
+						<h5>Type of joke:</h5>
+						<form id="category" class="d-flex flex-column flex-sm-row align-items-sm-center justify-content-center">
+							<div class="m-1">
+								<input type="radio" name="joke" value="Programming" />
+								<label for="Programming">Programming</label>
+							</div>
+							<div class="m-1">
+								<input type="radio" name="joke" value="Dark" />
+								<label for="Dark">Dark</label>
+							</div>
+							<div class="m-1">
+								<input type="radio" name="joke" value="Pun" />
+								<label for="Pun">Pun</label>
+							</div>
+							<div class="m-1">
+								<input type="radio" name="joke" value="Christmas" />
+								<label for="Christmas">Christmas</label>
+							</div>
+						</form>
+					</div>
+					<div class="col-sm-4 d-flex align-items-center">
+						<button class="btn btn-danger" id="joke-button" onclick="getJoke()">Tell me a joke.</button>
+					</div>
 				</div>
-				<button class="btn btn-danger" id="joke-button" onclick="getJoke()">Tell me a joke.</button>
 				<img class="img-fluid" src="images/divider.png" />
 
 				<div id="result" class="d-flex flex-column align-items-start w-100" class="mt-2"></div>

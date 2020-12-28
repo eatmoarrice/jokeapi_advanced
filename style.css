@@ -1,7 +1,12 @@
 body {
 	color: rgb(133, 26, 44);
-	background-image: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+	/* background-image: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%); */
+	background-color: #fbf7ef;
 	background-attachment: fixed;
+}
+
+* {
+	box-sizing: border-box;
 }
 
 body,
@@ -12,7 +17,7 @@ html {
 .page {
 	position: relative;
 	height: 1px;
-	min-height: 100vh;
+	min-height: calc(100vh - 40px);
 }
 
 #setup {
@@ -43,4 +48,45 @@ html {
 
 #result > * {
 	line-height: 50px;
+}
+
+a {
+	text-decoration: none;
+}
+
+nav > * {
+	height: 40px;
+	text-transform: uppercase;
+	font-weight: 700;
+	color: #fbf7ef !important;
+	letter-spacing: 1px;
+}
+#nav-col-1 {
+	background-color: #a7c957;
+	transition-duration: 0.3s;
+}
+
+#nav-col-2 {
+	background-color: #386641;
+	transition-duration: 0.3s;
+}
+
+#nav-col-3 {
+	background-color: #bc4749;
+	transition-duration: 0.3s;
+}
+
+#nav-col-1:hover {
+	background-color: #7c2760;
+	transition-duration: 0.3s;
+}
+
+#nav-col-2:hover {
+	background-color: #12455c;
+	transition-duration: 0.3s;
+}
+
+#nav-col-3:hover {
+	background-color: #886720;
+	transition-duration: 0.3s;
 }
