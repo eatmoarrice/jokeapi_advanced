@@ -9,7 +9,7 @@ const getJoke = async () => {
 	const response = await fetch(url);
 	const data = await response.json();
 	if (data.type === 'single') {
-		resultArea.innerHTML = `<h3>${data.joke}</h3>`;
+		resultArea.innerHTML = `<h3 class="my-sm-5">${data.joke}</h3>`;
 		dadImage.style.opacity = '1';
 		dadImage.style.left = '0';
 		dadImage.style.right = 'auto';
