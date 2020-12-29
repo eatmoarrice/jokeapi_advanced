@@ -2,7 +2,7 @@ let resultArea = document.getElementById('result');
 let dadImage = document.getElementById('dad-image');
 let jokeButton = document.getElementById('joke-button');
 const getJoke = async () => {
-	let category = getCategory();
+	let category = (selectedCategory = document.getElementById('category').joke.value);
 	jokeButton.disabled = true;
 	if (!category) category = 'Any';
 	const url = `https://v2.jokeapi.dev/joke/${category}?blacklistFlags=nsfw,religious,political,racist,sexist,explicit`;
@@ -27,10 +27,4 @@ const getJoke = async () => {
 			jokeButton.disabled = false;
 		}, 2500);
 	}
-};
-
-const getCategory = () => {
-	const selectedCategory = document.getElementById('category').joke.value;
-	console.log(selectedCategory);
-	return selectedCategory;
 };
